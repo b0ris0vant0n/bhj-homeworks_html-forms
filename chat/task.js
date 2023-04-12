@@ -41,7 +41,7 @@ const messages = [
       return;
     if (this.value.length === 0)
       return;
-    if (this.value == ' ')
+    if (this.value.trim() === '')
       return;
     chatMessages.innerHTML += `<div class="message message_client"><div class="message__time">${new Date().toLocaleTimeString().substr(0,5)}</div><div class="message__text">${this.value}</div></div>`;  
     this.value = '';
